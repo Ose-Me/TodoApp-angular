@@ -1,10 +1,13 @@
+import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-
-const routes: Routes = [];
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppComponent } from './app.component';
+import { CoreModule } from 'src/modules/core/core.module';
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  declarations: [AppComponent],
+  imports: [BrowserModule, BrowserAnimationsModule, CoreModule.forRoot()],
+  providers: [],
+  bootstrap: [AppComponent],
 })
-export class AppRoutingModule { }
+export class AppModule {}
